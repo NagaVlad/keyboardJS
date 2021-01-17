@@ -3,6 +3,7 @@ import './styles/styles.css'
 import './styles/scss.scss'
 
 // let isShit = true;
+var xxxxx = 1;
 let caps = false;
 let capsStatus = {
    on: "ON",
