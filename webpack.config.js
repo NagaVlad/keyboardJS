@@ -10,42 +10,11 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
 
-// const jsLoaders = () => {
-//    const loaders = [
-//       // loader: 'babel-loader',
-//       // options: babelOptions()
-//    ]
-
-//    if (isDev) {
-//       loaders.push('eslint-loader')
-//    }
-
-//    return loaders
-// }
-
-// const optimization = () => {
-//    const config = {
-//       splitChunks: {
-//          chunks: 'all'
-//       }
-//    }
-
-//    if (isProd) {
-//       config.minimizer = [
-//          new OptimizeCssAssetWebpackPlugin(),
-//          new TerserWebpackPlugin()
-//       ]
-//    }
-
-//    return config
-// }
-
 module.exports = {
    context: path.resolve(__dirname, 'source'),
    mode: 'development',
    entry: {
       main: ['@babel/polyfill', './index.js'],
-      // analytics: './analytics.js'
    },
    output: {
       filename: '[name].js',
@@ -55,10 +24,9 @@ module.exports = {
    resolve: {
       extensions: ['.js', '.json', '.png'],
       alias: {
-         //ПОСМОТРЕТЬ с  1:22
+
       }
    },
-   // optimization: optimization(),
 
    devServer: {
       port: 5500,
@@ -86,9 +54,7 @@ module.exports = {
                   loader: MiniCssExtractPlugin.loader,
                   options: {
                      publicPath: path.resolve(__dirname, 'dist'),
-                     // hmr: isDev,
-                     // reloadAll: true
-                     //1:49
+
                   },
                }
                , 'css-loader'
@@ -100,8 +66,7 @@ module.exports = {
                {
                   loader: MiniCssExtractPlugin.loader,
                   options: {
-                     // hmr: isDev,
-                     // reloadAll: true
+
                   },
                },
                'css-loader',

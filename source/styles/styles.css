@@ -1,17 +1,13 @@
-@import "~normalize.css";
-
 #keyboard {
    font-size: 20px;
    width: 1000px;
    border: 2px solid black;
    border-radius: 10px;
    padding: 8px;
-   /* background: linear-gradient(to top, #ceaea3 20%, #e4e4d8 50%, #a19887 80%); */
    background: #f7f5f550;
    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
    margin-bottom: 20px;
    margin-top: 20px;
-   /* margin: 0 auto; */
 }
 
 .key-code {
@@ -29,14 +25,19 @@
 
 .active {
    background: #ffff99;
-   /* font-weight: bold; */
 }
+
 .active2 {
    font-weight: bold;
    background: rgba(233, 233, 247);
 }
+
 .info {
    font-weight: 550;
+}
+.info2 {
+   font-size: 14px;
+   font-weight: 800;
 }
 
 .show {
