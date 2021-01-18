@@ -7,7 +7,7 @@ export function clicked(obj, textarea, init) {
       el.addEventListener('click', (e) => {
          // console.log(e);
          keyCode.forEach(function (el) {
-            // el.classList.remove('active')
+            // obj.caps = false
          })
          // e.target.classList.add('active');
 
@@ -47,6 +47,12 @@ export function clicked(obj, textarea, init) {
          else {
             obj.caps ? typeInTextarea(e.target.textContent.trim().toLocaleUpperCase(), textarea)
                : typeInTextarea(e.target.textContent.trim().toLocaleLowerCase(), textarea);
+
+            let shift = document.querySelector(`.key-code[data-key-code='16']`)
+            if (shift.classList.contains('active2')) {
+               obj.caps = false
+               shift.classList.remove('active2')
+            }
 
             // obj.caps ? textarea.value += e.target.textContent.trim().toLocaleUpperCase()
             //    : textarea.value += e.target.textContent.trim().toLocaleLowerCase()
