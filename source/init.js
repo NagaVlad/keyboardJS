@@ -37,20 +37,21 @@ function draw(obj, out) {
    // let key = obj.lang ? obj.key2 : obj.key
 
    for (let i = 0; i < key.length; i++) {
-      if (i == 12) {
-         out += `<div class='key-code active info' data-key-code=8>backspace</div>`
+
+      switch (i) {
+         case 12:
+            out += `<div class='key-code active info' data-key-code=8>backspace</div>`
+            break;
+         case 24:
+            out += `<div class='key-code active' data-key-code=13>Enter</div>`
+            out += `<div class='key-code active' data-key-code=20>Caps</div>`
+            break;
+         case 36:
+            out += `<div class='key-code active' data-key-code=16>Shift</div>`
+            break;
       }
-      if (i == 24) {
-         out += `<div class='key-code active' data-key-code=13>Enter</div>`
-      }
-      if (i == 24) {
-         out += `<div class='key-code active' data-key-code=20>Caps</div>`
-      }
-      if (i == 36) {
-         out += `<div class='key-code active' data-key-code=16>Shift</div>`
-      }
-      // out += `<div class='key-code' data-key-code=${key[i]}> ${String.fromCharCode(key[i]).toLocaleUpperCase()} </div>`
       out += `<div class='key-code active' data-key-code=${key[i]}> ${String.fromCharCode(key[i])} </div>`
+
    }
    out += `<div class='key-code active' data-key-code=18>Eng/Rus</div>`
    out += `<div class='key-code space active' data-key-code=32>SPACE</div>`

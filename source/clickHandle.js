@@ -50,7 +50,7 @@ export function clicked(obj, textarea, init) {
 
             let shift = document.querySelector(`.key-code[data-key-code='16']`)
             if (shift.classList.contains('active2')) {
-               obj.caps = false
+               obj.caps = !obj.caps
                shift.classList.remove('active2')
             }
 
