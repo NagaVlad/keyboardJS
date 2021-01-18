@@ -1,4 +1,5 @@
 export function events(btnClear, btnSH, textarea, obj, init) {
+
    btnClear.addEventListener('click', () => {
       textarea.value = ''
    })
@@ -15,4 +16,5 @@ export function events(btnClear, btnSH, textarea, obj, init) {
       let keyPressed = document.querySelector(`.key-code[data-key-code='${e.keyCode}']`);
       keyPressed.classList.add('active')
    }
+
 }

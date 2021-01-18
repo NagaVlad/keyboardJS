@@ -1,7 +1,9 @@
+
 import { init } from './init.js';
 import { obj } from './init.js'
 import { clicked } from './clickHandle.js'
 import { events } from './events.js'
+import { typeInTextarea } from './readKey.js'
 import './styles/styles.css'
 import './styles/scss.scss'
 
@@ -22,3 +24,7 @@ document.onkeydown = function (e) {
       clicked(obj, textarea, init)
    }
 }
+
+
+
+

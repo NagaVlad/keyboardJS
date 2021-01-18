@@ -1,17 +1,21 @@
+body {
+   background: #f7f5f5fa;
+}
 #keyboard {
    font-size: 20px;
    width: 1000px;
-   border: 2px solid black;
+   border: 1px solid black;
    border-radius: 10px;
    padding: 8px;
    background: #f7f5f550;
    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
    margin-bottom: 20px;
    margin-top: 20px;
+   background: radial-gradient(circle farthest-corner at 100px 50px, #fbf2eb, rgba(53, 42, 59, 0.26));
 }
 
 .key-code {
-   border-radius: 3%;
+   border-radius: 7%;
    flex: 1 1 5%;
    display: flex;
    justify-content: center;
@@ -20,19 +24,27 @@
    height: 30px;
    margin: 5px;
    padding: 5px;
-   border: 2px solid black;
+   border: 1px solid black;
 }
 
 .active {
-   background: #ffff99;
+}
+.active:hover {
+   color: black;
+   border-color: currentColor;
+   background-color: rgba(117, 103, 103, 0.267);
+}
+.active:active {
+   transform: translateY(1.5px);
+   filter: saturate(150%);
 }
 
 .active2 {
-   font-weight: bold;
-   background: rgba(233, 233, 247);
+   background: rgba(117, 103, 103, 0.438);
 }
 
 .info {
+   font-size: 13px;
    font-weight: 550;
 }
 .info2 {
@@ -52,16 +64,21 @@
 
 #btn,
 #btnSH {
+   outline: none;
    width: 200px;
    border: 1px solid black;
    border-radius: 5px;
-   background: white;
+   background: radial-gradient(circle farthest-corner at 100px 50px, #fbf2eb, rgba(53, 42, 59, 0.26));
    color: rgb(15, 15, 15);
    padding: 8px 16px;
    font-size: 16px;
 }
 
+.btn:focus {
+}
+
 textarea {
+   background: #f7f5f5fa;
    font-size: 20px;
    overflow: auto;
 }
