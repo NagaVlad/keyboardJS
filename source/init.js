@@ -34,7 +34,7 @@ function draw(obj, out) {
       key = obj.key3
    }
 
-   // let key = obj.lang ? obj.key2 : obj.key
+
 
    for (let i = 0; i < key.length; i++) {
 

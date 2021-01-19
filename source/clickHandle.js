@@ -79,6 +79,6 @@ export function typeInTextarea2(newText, el = document.activeElement) {
    const before = text.substring(0, start - 1)
    const after = text.substring(end, text.length)
    el.value = (before + after)
-   el.selectionStart = el.selectionEnd = start + newText.length
+   el.selectionStart = el.selectionEnd = start - 1
    el.focus()
 }
