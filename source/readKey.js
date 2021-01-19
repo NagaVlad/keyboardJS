@@ -5,6 +5,3 @@ export function readKey(test) {
       console.log(test);
    }
 }
-
-
-

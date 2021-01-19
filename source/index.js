@@ -1,27 +1,21 @@
 
 import { init } from './init.js';
-import { obj } from './init.js'
+import { state } from './keyForKeyboard.js'
+import { textarea, btnClear, btnSH } from './keyForKeyboard.js'
 import { clicked } from './clickHandle.js'
 import { events } from './events.js'
-import { typeInTextarea } from './readKey.js'
 import './styles/styles.css'
 import './styles/scss.scss'
 
-let textarea = document.querySelector('#textResult')
-let btnClear = document.querySelector('#btn')
-let btnSH = document.querySelector('#btnSH')
-
-init(obj);
-
-clicked(obj, textarea, init);
-
-events(btnClear, btnSH, textarea, init);
+init(state);
+clicked(state, textarea, init);
+events(btnClear, btnSH, textarea);
 
 document.onkeydown = function (e) {
    if (e.shiftKey && e.code === 'AltLeft') {
-      obj.lang = !obj.lang
-      init(obj);
-      clicked(obj, textarea, init)
+      state.lang = !state.lang
+      init(state);
+      clicked(state, textarea, init)
    }
 }
 
